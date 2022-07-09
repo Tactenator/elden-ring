@@ -1,13 +1,305 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+  margin: 0; 
+  padding: 0;  
+  font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body
+{ 
+  margin: auto; 
+  background: black; 
+}
+
+.navbar-container 
+{
+  position: relative; 
+  display: flex; 
+  align-items: stretch;
+  justify-content: center;
+  border: 1px solid black; 
+  height: 70px; 
+  background-color: rgb(32, 32, 32);
+  color: white; 
+}
+
+.navbar-list
+{
+  display: flex; 
+  gap: 30px; 
+  list-style: none; 
+  background: rgb(32, 32, 32);  
+  align-items: stretch;
+  justify-content: center;
+}
+
+.navbar-list li 
+{
+  display: flex; 
+  align-items: center;
+  font-size: 20px; 
+  text-transform: uppercase;
+  background: rgb(32, 32, 32); 
+  font-weight: bold;
+}
+.navbar-list li a
+{
+  text-decoration: none; 
+  color: white; 
+}
+
+.navbar-list li a:hover
+{
+  color: #ddbf83; 
+  cursor: pointer; 
+}
+
+.navbar-list li:hover {
+  color: #ddbf83; 
+  cursor: pointer; 
+}
+
+.equipment-container
+{
+  position: absolute;
+  left: 26.7%; 
+  top: -400px; 
+  color: black; 
+  opacity: 0;  
+  z-index: 1;   
+}
+
+.equipment-list 
+{
+  list-style: none; 
+  background-color: white; 
+  width: 150%; 
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none; 
+}
+
+.equipment-list li{
+  margin-left: 5px; 
+  margin-top: 3px; 
+  font-size: 18px; 
+  color: black; 
+}
+
+.equip:hover{
+  text-decoration: underline;
+  cursor: pointer; 
+}
+
+.items-container
+{
+  position: absolute;
+  left: 74.9%; 
+  top: -400px; 
+  color: black; 
+  opacity: 0;  
+  z-index: 1;   
+}
+
+.items-list 
+{
+  list-style: none; 
+  background-color: white; 
+  width: 200%; 
+}
+
+.sword-container
+{
+  position: absolute;
+  left: 35.15%; 
+  top: -200%; 
+  color: black;
+  opacity: 0;  
+  z-index: 1;   
+}
+
+.swords-list 
+{ 
+  list-style: none; 
+  background-color: white; 
+  width: 120%; 
+}
+
+.spears-container
+{
+  position: absolute;
+  left: 35.15%; 
+  top: -320%; 
+  color: black;
+  opacity: 0;  
+  z-index: 1;   
+}
+
+.spears-list 
+{
+  list-style: none; 
+  background-color: white; 
+  width: 120%;
+}
+
+.items-list li{
+  margin-left: 5px; 
+  margin-top: 3px; 
+  font-size: 18px; 
+  color: black;
+}
+
+.home-container 
+{
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-top: 50px; 
+  border-top: #ddbf83 4px solid; 
+  width: 1200px; 
+}
+
+.welcome-container
+{
+  font-size: 24px;
+  border-top: #ddbf83 4px solid;
+  text-align: center; 
+  margin-top: 15px; 
+  color: white; 
+}
+
+.error
+{
+  color: white;
+  padding-top: 25px; 
+}
+
+.news-container 
+{
+  text-align: center; 
+  font-weight: bold; 
+  font-size: 22px; 
+  margin-top: 10px;  
+  border-bottom: #ddbf83 4px solid; 
+  list-style: none;
+  color: white; 
+ 
+}
+
+.news-item-container
+{
+  display: flex; 
+  text-align: left;
+  gap: 150px; 
+  justify-content: center; 
+  margin-bottom: 25px;  
+  color: white;  
+}
+
+.news-title
+{
+  display: block;
+  border-top: #ddbf83 4px solid;  
+  height: 100%; 
+}
+
+.news-one ul, .news-two ul
+{
+  list-style: none; 
+  margin-top: 25px; 
+}
+
+.items-display-container
+{
+  width: 1000px; 
+  margin: auto;  
+  margin-top: 50px; 
+  color: white;
+}
+
+.items-name
+{
+  color: #ddbf83; 
+  font-size: 34px; 
+  text-decoration: underline; 
+  margin-bottom: 25px; 
+  text-align: center;
+}
+
+.items-details-container
+{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  color: #ddbf83;  
+}
+
+.items-details{
+  display: flex;
+  margin-top: 25px; 
+  text-align: center; 
+  height: 175px; 
+  width: 150px; 
+  gap: 25px; 
+}
+
+.item-details-image 
+{
+  text-align: center;
+}
+
+.item-details-description
+{
+  text-align: center; 
+  margin-left: 50px; 
+  margin-right: 50px; 
+}
+
+.item-details-container 
+{
+  margin-left: 50px; 
+}
+
+.item-details-effect-title
+{
+  font-size: 32px; 
+  margin-top: 50px; 
+  color: #ddbf83; 
+}
+
+.item-details-effect
+{
+  margin-top: 25px; 
+}
+
+.crafting-container 
+{
+  margin-top: 25px;
+}
+
+
+.footer-container
+{
+  display: flex; 
+  height: 200px; 
+  margin-top: 50px; 
+  background:rgb(32, 32, 32);
+  gap: 250px; 
+  justify-content: center;
+  color: white; 
+}
+
+.footer-info, .footer-links
+{
+  margin-top: 25px;
+  width: 300px; 
+}
+
+.footer-links li {
+  padding: 5px; 
+  list-style: none;
 }
